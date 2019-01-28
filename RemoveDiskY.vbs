@@ -1,10 +1,10 @@
-Set oShell = WScript.CreateObject("WScript.Shell")
+п»їSet oShell = WScript.CreateObject("WScript.Shell")
 DesktopPath = oShell.SpecialFolders("Desktop")
 WorkingPath = oShell.SpecialFolders("\\192.168.1.209\Garant\Garant-FS")
-Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Гарант Платформа F1 Эксперт.lnk")
+Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚.lnk")
 oShortCut.TargetPath = "\\192.168.1.209\Garant\Garant-FS\garant.exe"
 oShortCut.WorkingDirectory = "\\192.168.1.209\Garant\Garant-FS"
-oShortCut.Description = "Гарант Платформа F1 Эксперт"
+oShortCut.Description = "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚"
 oShortCut.Save
 
 rem net use x: \\192.168.1.224\1Cdata Buh2010 /user:BuhOff
@@ -32,9 +32,9 @@ rem net use x: \\192.168.1.224\1Cdata Buh2010 /user:BuhOff
 'MapDrv "L:", "\\SRV\Users\" & WshShell.ExpandEnvironmentStrings("%USERNAME%")  
 '==========================================================================  
 ' Function MapDrv(DrvLet, UNCPath)  
-' DrvLet -  Буква устройства  
-' UNCPath - Сетевой путь  
-' COMMENT: Подключение сетевых дисков с записью ошибок в EventLog  
+' DrvLet -  Р‘СѓРєРІР° СѓСЃС‚СЂРѕР№СЃС‚РІР°  
+' UNCPath - РЎРµС‚РµРІРѕР№ РїСѓС‚СЊ  
+' COMMENT: РџРѕРґРєР»СЋС‡РµРЅРёРµ СЃРµС‚РµРІС‹С… РґРёСЃРєРѕРІ СЃ Р·Р°РїРёСЃСЊСЋ РѕС€РёР±РѕРє РІ EventLog  
 '==========================================================================  
 Function MapDrv(DrvLet, UNCPath)  
     Dim WshNetwork         ' Object variable  
@@ -65,8 +65,8 @@ Function MapDrv(DrvLet, UNCPath)
 End Function 
 '==========================================================================  
 ' Function InGroup(strGroup) 
-' strGroup - группа, принадлежность к которой проверяем 
-' COMMENT: проверка принадлежности пользователя к группе 
+' strGroup - РіСЂСѓРїРїР°, РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ Рє РєРѕС‚РѕСЂРѕР№ РїСЂРѕРІРµСЂСЏРµРј 
+' COMMENT: РїСЂРѕРІРµСЂРєР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рє РіСЂСѓРїРїРµ 
 '==========================================================================  
 Function InGroup(strGroup)    
   InGroup=False    

@@ -1,4 +1,4 @@
-Option Explicit  
+п»їOption Explicit  
 On Error Resume Next  
 Dim WshShell
 dim DesktopPath 
@@ -9,18 +9,18 @@ Dim oShell' as WshShell
 Set oShell = WScript.CreateObject("WScript.Shell")
 DesktopPath = oShell.SpecialFolders("Desktop")
 'WorkingPath = oShell.SpecialFolders("\\192.168.1.209\Garant\Garant-FS")
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 1"
-Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Гарант Платформа F1 Эксперт.lnk")
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 1"
+Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚.lnk")
 oShortCut.TargetPath = "\\192.168.1.224\Garant\Garant-FS\garant.exe"
 oShortCut.WorkingDirectory = "\\192.168.1.224\Garant\Garant-FS"
-oShortCut.Description = "Гарант Платформа F1 Эксперт"
+oShortCut.Description = "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚"
 oShortCut.Save
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 2"
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 2"
 
 Dim WshNetwork  
 Set WshNetwork = WScript.CreateObject("WScript.Network")  
 On Error Resume Next  
-'WshNetwork.MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", true, "Администратор", "Ghj100rdf"
+'WshNetwork.MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", true, "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ", "Ghj100rdf"
 'oShell.LogEvent 2, "sbisNET"
 'WshNetwork.MapNetworkDrive"z:", "\\192.168.1.224\pub", true ', "BuhOff", "Buh2010")
 'oShell.LogEvent 2, "pub"
@@ -29,10 +29,10 @@ On Error Resume Next
 'oShell.LogEvent 2, CStr(Err.Number)
 'oShell.LogEvent 2, Err.Description
 
-oShell.LogEvent 2, "Кружка."
-oShell.LogEvent 2, "Кружка."
+oShell.LogEvent 2, "РљСЂСѓР¶РєР°."
+oShell.LogEvent 2, "РљСЂСѓР¶РєР°."
 
-'под каким именем на любом компьютере в локальной сети вошли
+'РїРѕРґ РєР°РєРёРј РёРјРµРЅРµРј РЅР° Р»СЋР±РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ РІ Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё РІРѕС€Р»Рё
 Dim objAD, objUserName, objComputerName
 Dim objFS, objFile
 Dim objWMI
@@ -46,8 +46,8 @@ dim objWMIService
 dim colNetAdapters
 dim strAddress
 
-'Const strPath = "\\192.168.1.230\ПользователиДомена\Log\Log.txt" 'Здесь надо задать UNC-путь к доступному для всех пользователей на запись сетевому ресурсу
-Const strPath = "\\192.168.1.230\Log\Log.txt" 'Здесь надо задать UNC-путь к доступному для всех пользователей на запись сетевому ресурсу
+'Const strPath = "\\192.168.1.230\РџРѕР»СЊР·РѕРІР°С‚РµР»РёР”РѕРјРµРЅР°\Log\Log.txt" 'Р—РґРµСЃСЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ UNC-РїСѓС‚СЊ Рє РґРѕСЃС‚СѓРїРЅРѕРјСѓ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РЅР° Р·Р°РїРёСЃСЊ СЃРµС‚РµРІРѕРјСѓ СЂРµСЃСѓСЂСЃСѓ
+Const strPath = "\\192.168.1.230\Log\Log.txt" 'Р—РґРµСЃСЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ UNC-РїСѓС‚СЊ Рє РґРѕСЃС‚СѓРїРЅРѕРјСѓ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РЅР° Р·Р°РїРёСЃСЊ СЃРµС‚РµРІРѕРјСѓ СЂРµСЃСѓСЂСЃСѓ
 Const ForAppending = 8
 Set objAD = CreateObject("ADSystemInfo")
 Set objUserName = GetObject("LDAP://" & objAD.UserName)
@@ -56,7 +56,7 @@ Set objComputerName = GetObject("LDAP://" & objAD.ComputerName)
 Set objFS = CreateObject("Scripting.FileSystemObject")
 Set objFile = objFS.OpenTextFile(strPath, ForAppending, True)
 objFile.WriteLine(Date & "; " & Time & "; " & objComputerName.cn & "; " & objUserName.cn)
-oShell.LogEvent 2, "Кружка Date & Time."
+oShell.LogEvent 2, "РљСЂСѓР¶РєР° Date & Time."
 
 strComputer = "."
 strIP = "."
@@ -77,7 +77,7 @@ Next
 dim stringx 
 dim freef 
 dim free
-stringx = "Локальные диски"
+stringx = "Р›РѕРєР°Р»СЊРЅС‹Рµ РґРёСЃРєРё"
 Set fso = WScript.CreateObject("Scripting.FileSystemObject")
 For each i In fso.Drives
   If i.DriveType=1 Then
@@ -87,7 +87,7 @@ For each i In fso.Drives
   End If
   If i.DriveType=2 Then
     free=FormatNumber(fso.GetDrive(i.DriveLetter).FreeSpace/1048576, 1)'frit(i)'frit2(i)
-    stringx= stringx & " На диске " & i & " свободно " & free & " Мб " & vbNewLine
+    stringx= stringx & " РќР° РґРёСЃРєРµ " & i & " СЃРІРѕР±РѕРґРЅРѕ " & free & " РњР± " & vbNewLine
   End If
 Next
 Const AlertHigh = .9  
@@ -100,7 +100,7 @@ set objRet = objSvc.InstancesOf("win32_LogicalDisk")
   for each item in objRet
     if item.DriveType = 7 then
     else
-      strMessage = strMessage & "Свободно на '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " Мб из " & FormatNumber((item.size/1024000),0) & " Мб"
+      strMessage = strMessage & "РЎРІРѕР±РѕРґРЅРѕ РЅР° '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " РњР± РёР· " & FormatNumber((item.size/1024000),0) & " РњР±"
       objFile.WriteLine(strMessage)
       strMessage=""
     end if
@@ -110,14 +110,14 @@ set objSvc = Nothing
 set objRet = Nothing
 Set objCollection = objWMIService.ExecQuery("SELECT * FROM Win32_OperatingSystem")
 For Each objItem In objCollection
-  objFile.WriteLine("Версия ОС: " & objItem.Version & " Пакет обновления: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
+  objFile.WriteLine("Р’РµСЂСЃРёСЏ РћРЎ: " & objItem.Version & " РџР°РєРµС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
 Next
 dim strTextBody
 Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration",,48) 
 For Each objItem in colItems 
     If isNull(objItem.IPAddress) Then
     Else
-      strTextBody = strTextBody + vbCrLf + "Сетевая карта: " & objItem.Caption & ", IP адрес: " & Join(objItem.IPAddress, ",")
+      strTextBody = strTextBody + vbCrLf + "РЎРµС‚РµРІР°СЏ РєР°СЂС‚Р°: " & objItem.Caption & ", IP Р°РґСЂРµСЃ: " & Join(objItem.IPAddress, ",")
     End If
 Next
 objFile.WriteLine(strTextBody)
@@ -127,30 +127,30 @@ dim compname, temp, compad
 constmb=1048576 
 Set colItems = objWMIService.InstancesOf("win32_ComputerSystem")
 for each objItem in colItems 
-  objFile.WriteLine("Оперативная память " & cstr(round(objItem.totalphysicalmemory/constmb)))
-  objFile.WriteLine("Модель компьютера " & objitem.model & vbCrLf)
+  objFile.WriteLine("РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ " & cstr(round(objItem.totalphysicalmemory/constmb)))
+  objFile.WriteLine("РњРѕРґРµР»СЊ РєРѕРјРїСЊСЋС‚РµСЂР° " & objitem.model & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_bios")
 for each objItem in colItems 
-  objFile.WriteLine("Материнская плата " & objitem.SMBIOSBIOSVersion)
+  objFile.WriteLine("РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р° " & objitem.SMBIOSBIOSVersion)
   objFile.WriteLine("BIOS " & objitem.caption & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_processor")
 for each objItem in colItems 
   s=s+1 
-  objFile.WriteLine("Процессор " & cstr(s) & " " & objitem.name)
-  objFile.WriteLine("Процессор " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃРѕСЂ " & cstr(s) & " " & objitem.name)
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃРѕСЂ " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 Set colItems = objWMIService.InstancesOf("win32_videocontroller")
 for each objItem in colItems 
-  objFile.WriteLine("Видеоконтролер " & objitem.name)
+  objFile.WriteLine("Р’РёРґРµРѕРєРѕРЅС‚СЂРѕР»РµСЂ " & objitem.name)
 next
 
 'Set colItems = objWMIService.InstancesOf("win32_printer")
 'for each objItem in colItems 
-'  objFile.WriteLine("Принтер "  & objitem.name)
-'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+'  objFile.WriteLine("РџСЂРёРЅС‚РµСЂ "  & objitem.name)
+'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 'next
 Set colItems = objWMIService.InstancesOf("Win32_PrinterConfiguration")
 for each objItem in colItems 
@@ -164,21 +164,21 @@ next
 
 Set colItems = objWMIService.InstancesOf("Win32_DesktopMonitor")
 for each objItem in colItems 
-  objFile.WriteLine("Монитор " & objitem.name)
-'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("РњРѕРЅРёС‚РѕСЂ " & objitem.name)
+'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 Set colItems = objWMIService.InstancesOf("Win32_UserAccount")
 for each objItem in colItems 
     if objitem.LocalAccount = true then
-      objFile.WriteLine("Локальный пользователь " & objitem.name)
+      objFile.WriteLine("Р›РѕРєР°Р»СЊРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ " & objitem.name)
     end if
 next
 'objFile.WriteLine(" " & vbCrLf)
 
 Set colItems = objWMIService.InstancesOf("Win32_Product")
 for each objItem in colItems 
-  objFile.WriteLine("Программа " & objitem.name)
+  objFile.WriteLine("РџСЂРѕРіСЂР°РјРјР° " & objitem.name)
   objFile.WriteLine("ID " & cstr(objitem.ProductID))
   objFile.WriteLine("Version " & objitem.Version)
   objFile.WriteLine("PackageCode " & cstr(objitem.PackageCode))
@@ -186,9 +186,9 @@ for each objItem in colItems
 next
 
 Set colItems = objWMIService.InstancesOf("Win32_ProcessStartup")
-objFile.WriteLine("Процесс " & objitem.Title)
+objFile.WriteLine("РџСЂРѕС†РµСЃСЃ " & objitem.Title)
 for each objItem in colItems 
-  objFile.WriteLine("Процесс " & objitem.Title)
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃ " & objitem.Title)
 next
 
 objFile.WriteLine("**************************************************************")

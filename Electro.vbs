@@ -1,19 +1,19 @@
-Option Explicit  
+п»їOption Explicit  
 On Error Resume Next  
 Dim WshShell
 dim DesktopPath 
 dim WorkingPath
 dim oShortCut
-'net use y: \\192.168.1.226\sbisNET Ghj100rdf /user:Администратор
-'MapDrv "y:", "\\192.168.1.226\sbisNET", "Администратор", "Ghj100rdf"
+'net use y: \\192.168.1.226\sbisNET Ghj100rdf /user:РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ
+'MapDrv "y:", "\\192.168.1.226\sbisNET", "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ", "Ghj100rdf"
 'net use x: \\192.168.1.224\1Cdata Buh2010 /user:BuhOff
 'MapDrv "x:", "\\192.168.1.224\1Cdata", "BuhOff", "Buh2010"
 'net use z: \\192.168.1.224\pub Buh2010 /user:BuhOff
 'MapDrv "z:", "\\192.168.1.224\pub", "BuhOff", "Buh2010"
 
-' Замена пароля Администратора на всех компьютерах 
+' Р—Р°РјРµРЅР° РїР°СЂРѕР»СЏ РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° РЅР° РІСЃРµС… РєРѕРјРїСЊСЋС‚РµСЂР°С… 
 'strComputer = "."
-'Set objUser = GetObject("WinNT://" & strComputer & "/Администратор,user")
+'Set objUser = GetObject("WinNT://" & strComputer & "/РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ,user")
 'objUser.SetPassword "gztECPh8"
 'objUser.SetInfo
 
@@ -21,13 +21,13 @@ Dim oShell' as WshShell
 Set oShell = WScript.CreateObject("WScript.Shell")
 DesktopPath = oShell.SpecialFolders("Desktop")
 'WorkingPath = oShell.SpecialFolders("\\192.168.1.209\Garant\Garant-FS")
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 1"
-Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Гарант Платформа F1 Эксперт.lnk")
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 1"
+Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚.lnk")
 oShortCut.TargetPath = "\\192.168.1.224\Garant\Garant-FS\garant.exe"
 oShortCut.WorkingDirectory = "\\192.168.1.224\Garant\Garant-FS"
-oShortCut.Description = "Гарант Платформа F1 Эксперт"
+oShortCut.Description = "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚"
 oShortCut.Save
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 2"
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 2"
 
 
 rem net use x: \\192.168.1.224\1Cdata Buh2010 /user:BuhOff
@@ -39,13 +39,13 @@ Dim WshNetwork
 'Set WshShell = WScript.CreateObject("WScript.Shell")  
 Set WshNetwork = WScript.CreateObject("WScript.Network")  
 'WshNetwork.RemoveNetworkDrive "y:"
-'MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", "Администратор", "Ghj100rdf"
-'oShell.LogEvent 1, "Кружка."
-'oShell.LogEvent 1, "Кружка."
+'MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ", "Ghj100rdf"
+'oShell.LogEvent 1, "РљСЂСѓР¶РєР°."
+'oShell.LogEvent 1, "РљСЂСѓР¶РєР°."
 'WshNetwork.RemoveNetworkDrive "x"
 'WshNetwork.RemoveNetworkDrive "y"
 'WshNetwork.RemoveNetworkDrive "z"
-'WshNetwork.MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", true, "Администратор", "Ghj100rdf"
+'WshNetwork.MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", true, "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ", "Ghj100rdf"
 'WshNetwork.MapNetworkDrive "z:", "\\192.168.1.224\\chm2010", true ', "data\BuhOff", "Buh2010"
 'WshNetwork.MapNetworkDrive "x:", "\\192.168.1.224\1Cdata", true', "data\BuhOff", "Buh2010"
 
@@ -53,13 +53,13 @@ Set WshNetwork = WScript.CreateObject("WScript.Network")
 ' On Error Resume Next  
 ' WshNetwork.RemoveNetworkDrive DrvLet  
 
-'oShell.LogEvent 2, "Кружка."
-oShell.LogEvent 2, "Кружка."
+'oShell.LogEvent 2, "РљСЂСѓР¶РєР°."
+oShell.LogEvent 2, "РљСЂСѓР¶РєР°."
 oShell.LogEvent 2, CStr(Err.Number)
 oShell.LogEvent 2, Err.Description
 
 
-'под каким именем на любом компьютере в локальной сети вошли
+'РїРѕРґ РєР°РєРёРј РёРјРµРЅРµРј РЅР° Р»СЋР±РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ РІ Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё РІРѕС€Р»Рё
 Dim objAD, objUserName, objComputerName
 Dim objFS, objFile
 Dim objWMI
@@ -73,8 +73,8 @@ dim objWMIService
 dim colNetAdapters
 dim strAddress
 
-'Const strPath = "\\192.168.1.230\пользователидомена\log\Log.txt" 'Здесь надо задать UNC-путь к доступному для всех пользователей на запись сетевому ресурсу
-Const strPath = "\\192.168.1.230\log\Log.txt" 'Здесь надо задать UNC-путь к доступному для всех пользователей на запись сетевому ресурсу
+'Const strPath = "\\192.168.1.230\РїРѕР»СЊР·РѕРІР°С‚РµР»РёРґРѕРјРµРЅР°\log\Log.txt" 'Р—РґРµСЃСЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ UNC-РїСѓС‚СЊ Рє РґРѕСЃС‚СѓРїРЅРѕРјСѓ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РЅР° Р·Р°РїРёСЃСЊ СЃРµС‚РµРІРѕРјСѓ СЂРµСЃСѓСЂСЃСѓ
+Const strPath = "\\192.168.1.230\log\Log.txt" 'Р—РґРµСЃСЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ UNC-РїСѓС‚СЊ Рє РґРѕСЃС‚СѓРїРЅРѕРјСѓ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РЅР° Р·Р°РїРёСЃСЊ СЃРµС‚РµРІРѕРјСѓ СЂРµСЃСѓСЂСЃСѓ
 Const ForAppending = 8
 Set objAD = CreateObject("ADSystemInfo")
 Set objUserName = GetObject("LDAP://" & objAD.UserName)
@@ -146,12 +146,12 @@ Next
 dim stringx 
 dim freef 
 dim free
-stringx = "Локальные диски"
+stringx = "Р›РѕРєР°Р»СЊРЅС‹Рµ РґРёСЃРєРё"
 '  & vbNewLine  & vbNewLine
 'objFile.WriteLine(stringx & vbNewLine)
 Set fso = WScript.CreateObject("Scripting.FileSystemObject")
 'Set WSHShell = WScript.CreateObject("WScript.Shell")
-'Проверяем все драйвы (HDD, FDD, CDD) в системе    
+'РџСЂРѕРІРµСЂСЏРµРј РІСЃРµ РґСЂР°Р№РІС‹ (HDD, FDD, CDD) РІ СЃРёСЃС‚РµРјРµ    
 For each i In fso.Drives
   If i.DriveType=1 Then
     If i.DriveLetter<>"A:" Then
@@ -163,7 +163,7 @@ For each i In fso.Drives
 '    objFile.WriteLine(i)
     free=FormatNumber(fso.GetDrive(i.DriveLetter).FreeSpace/1048576, 1)'frit(i)'frit2(i)
 '    oShell.Popup(free)
-    stringx= stringx & " На диске " & i & " свободно " & free & " Мб " & vbNewLine
+    stringx= stringx & " РќР° РґРёСЃРєРµ " & i & " СЃРІРѕР±РѕРґРЅРѕ " & free & " РњР± " & vbNewLine
   End If
 Next
 'stringx = stringx
@@ -181,8 +181,8 @@ set objRet = objSvc.InstancesOf("win32_LogicalDisk")
     else
 '    end if
 '    if item.FreeSpace/item.size <= AlertHigh then
-'      strMessage = strMessage & UCase(strComputer) & ": Диск '" & item.caption & "' is low on HDD space!  There are " & FormatNumber((item.FreeSpace/1024000),0) & " MB free <7%" & vbCRLF
-      strMessage = strMessage & "Свободно на '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " Мб из " & FormatNumber((item.size/1024000),0) & " Мб"
+'      strMessage = strMessage & UCase(strComputer) & ": Р”РёСЃРє '" & item.caption & "' is low on HDD space!  There are " & FormatNumber((item.FreeSpace/1024000),0) & " MB free <7%" & vbCRLF
+      strMessage = strMessage & "РЎРІРѕР±РѕРґРЅРѕ РЅР° '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " РњР± РёР· " & FormatNumber((item.size/1024000),0) & " РњР±"
 '      oShell.Popup(strMessage)
       objFile.WriteLine(strMessage)
       strMessage=""
@@ -193,14 +193,14 @@ set objSvc = Nothing
 set objRet = Nothing
 Set objCollection = objWMIService.ExecQuery("SELECT * FROM Win32_OperatingSystem")
 For Each objItem In objCollection
-  objFile.WriteLine("Версия ОС: " & objItem.Version & " Пакет обновления: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
+  objFile.WriteLine("Р’РµСЂСЃРёСЏ РћРЎ: " & objItem.Version & " РџР°РєРµС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
 Next
 dim strTextBody
 Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration",,48) 
 For Each objItem in colItems 
     If isNull(objItem.IPAddress) Then
     Else
-      strTextBody = strTextBody + vbCrLf + "Сетевая карта: " & objItem.Caption & ", IP адрес: " & Join(objItem.IPAddress, ",")
+      strTextBody = strTextBody + vbCrLf + "РЎРµС‚РµРІР°СЏ РєР°СЂС‚Р°: " & objItem.Caption & ", IP Р°РґСЂРµСЃ: " & Join(objItem.IPAddress, ",")
     End If
 Next
 objFile.WriteLine(strTextBody)
@@ -210,31 +210,31 @@ dim compname, temp, compad
 constmb=1048576 
 Set colItems = objWMIService.InstancesOf("win32_ComputerSystem")
 for each objItem in colItems 
-  objFile.WriteLine("Оперативная память " & cstr(round(objItem.totalphysicalmemory/constmb)))
-  objFile.WriteLine("Модель компьютера " & objitem.model & vbCrLf)
+  objFile.WriteLine("РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ " & cstr(round(objItem.totalphysicalmemory/constmb)))
+  objFile.WriteLine("РњРѕРґРµР»СЊ РєРѕРјРїСЊСЋС‚РµСЂР° " & objitem.model & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_bios")
 for each objItem in colItems 
-  objFile.WriteLine("Материнская плата " & objitem.SMBIOSBIOSVersion)
+  objFile.WriteLine("РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р° " & objitem.SMBIOSBIOSVersion)
   objFile.WriteLine("BIOS " & objitem.caption & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_processor")
 for each objItem in colItems 
   s=s+1 
-  objFile.WriteLine("Процессор " & cstr(s) & " " & objitem.name)
-  objFile.WriteLine("Процессор " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃРѕСЂ " & cstr(s) & " " & objitem.name)
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃРѕСЂ " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 Set colItems = objWMIService.InstancesOf("win32_videocontroller")
 for each objItem in colItems 
 '  s=s+1 
-  objFile.WriteLine("Видеоконтролер " & objitem.name)
-'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("Р’РёРґРµРѕРєРѕРЅС‚СЂРѕР»РµСЂ " & objitem.name)
+'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 'Set colItems = objWMIService.InstancesOf("win32_printer")
 'for each objItem in colItems 
-'  objFile.WriteLine("Принтер "  & objitem.name)
+'  objFile.WriteLine("РџСЂРёРЅС‚РµСЂ "  & objitem.name)
 'next
 Set colItems = objWMIService.InstancesOf("Win32_PrinterConfiguration")
 for each objItem in colItems 
@@ -248,20 +248,20 @@ next
 Set colItems = objWMIService.InstancesOf("Win32_DesktopMonitor")
 for each objItem in colItems 
 '  s=s+1 
-  objFile.WriteLine("Монитор " & objitem.name)
-'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("РњРѕРЅРёС‚РѕСЂ " & objitem.name)
+'  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 Set colItems = objWMIService.InstancesOf("Win32_UserAccount")
 for each objItem in colItems 
     if objitem.LocalAccount = true then
-      objFile.WriteLine("Локальный пользователь " & objitem.name)
+      objFile.WriteLine("Р›РѕРєР°Р»СЊРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ " & objitem.name)
     end if
 next
 
 Set colItems = objWMIService.InstancesOf("Win32_Product")
 for each objItem in colItems 
-  objFile.WriteLine("Программа " & objitem.name)
+  objFile.WriteLine("РџСЂРѕРіСЂР°РјРјР° " & objitem.name)
   objFile.WriteLine("ID " & cstr(objitem.ProductID))
   objFile.WriteLine("Version " & objitem.Version)
   objFile.WriteLine("PackageCode " & cstr(objitem.PackageCode))
@@ -285,12 +285,12 @@ Set objWMI = Nothing
 WScript.Quit()
 
 'Msg = "Mapping network drive: " & CStr(Err.Number) & " 0x" & Hex(Err.Number) & vbCrLf & _  
-'  "Описание: " & Err.Description & vbCrLf  
+'  "РћРїРёСЃР°РЅРёРµ: " & Err.Description & vbCrLf  
 '  Msg = Msg & "Domain: " & WshNetwork.UserDomain & vbCrLf  
 '  Msg = Msg & "Computer Name: " & WshNetwork.ComputerName & vbCrLf  
-'  Msg = Msg & "Пользователь: " & WshNetwork.UserName & vbCrLf & vbCrLf  
-'  Msg = Msg & "Диск: " & "y:" & vbCrLf  
-'  Msg = Msg & "Маршрут: " & "\\192.168.1.226\sbisNET"
+'  Msg = Msg & "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: " & WshNetwork.UserName & vbCrLf & vbCrLf  
+'  Msg = Msg & "Р”РёСЃРє: " & "y:" & vbCrLf  
+'  Msg = Msg & "РњР°СЂС€СЂСѓС‚: " & "\\192.168.1.226\sbisNET"
 'oShell.LogEvent 1, Msg
 'Set objSysInfo = CreateObject("ADSystemInfo")   
 'strUserDN = objSysInfo.userName   
@@ -308,9 +308,9 @@ WScript.Quit()
 'MapDrv "L:", "\\SRV\Users\" & WshShell.ExpandEnvironmentStrings("%USERNAME%")  
 '==========================================================================  
 ' Function MapDrv(DrvLet, UNCPath)  
-' DrvLet -  Буква устройства  
-' UNCPath - Сетевой путь  
-' COMMENT: Подключение сетевых дисков с записью ошибок в EventLog  
+' DrvLet -  Р‘СѓРєРІР° СѓСЃС‚СЂРѕР№СЃС‚РІР°  
+' UNCPath - РЎРµС‚РµРІРѕР№ РїСѓС‚СЊ  
+' COMMENT: РџРѕРґРєР»СЋС‡РµРЅРёРµ СЃРµС‚РµРІС‹С… РґРёСЃРєРѕРІ СЃ Р·Р°РїРёСЃСЊСЋ РѕС€РёР±РѕРє РІ EventLog  
 '==========================================================================  
 function frit2(gg)
   frit = FormatNumber(fso.GetDrive(gg.DriveLetter).FreeSpace/1048576, 1)
@@ -331,10 +331,10 @@ Function MapDrv(DrvLet, UNCPath, sUsername, sPassword)
       Msg = Msg & "Device name: " & DrvLet & vbCrLf  
       Msg = Msg & "Map path: " & UNCPath   
     WshShell.LogEvent 1, Msg, "\\SRV"  
-    WshShell.LogEvent 4, "Кружка."
-    WshShell.LogEvent 2, "Кружка."
-    WshShell.LogEvent 0, "Кружка."
-    WshShell.LogEvent 1, "Кружка."
+    WshShell.LogEvent 4, "РљСЂСѓР¶РєР°."
+    WshShell.LogEvent 2, "РљСЂСѓР¶РєР°."
+    WshShell.LogEvent 0, "РљСЂСѓР¶РєР°."
+    WshShell.LogEvent 1, "РљСЂСѓР¶РєР°."
 
 '  0  SUCCESS
 '  1  ERROR
@@ -365,8 +365,8 @@ Function MapDrv(DrvLet, UNCPath, sUsername, sPassword)
 End Function 
 '==========================================================================  
 ' Function InGroup(strGroup) 
-' strGroup - группа, принадлежность к которой проверяем 
-' COMMENT: проверка принадлежности пользователя к группе 
+' strGroup - РіСЂСѓРїРїР°, РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ Рє РєРѕС‚РѕСЂРѕР№ РїСЂРѕРІРµСЂСЏРµРј 
+' COMMENT: РїСЂРѕРІРµСЂРєР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рє РіСЂСѓРїРїРµ 
 '==========================================================================  
 Function InGroup(strGroup)    
   InGroup=False    
@@ -413,7 +413,7 @@ End Function
 Function Computers_List(arrTemp)
 Dim objAD, objItem, strTemp, strList
 Dim strDomain, objWSNet
-Const strGroup = "Компьютеры домена"
+Const strGroup = "РљРѕРјРїСЊСЋС‚РµСЂС‹ РґРѕРјРµРЅР°"
 Set objWSNet = CreateObject("WScript.Network")
 strDomain = objWSNet.UserDomain
 Set objWSNet = Nothing
@@ -501,10 +501,10 @@ End Function
  
  
 rem ------------------------------------------------------------
-rem GetFreeDrive функция поиска свободной буквы диска по списку.
-rem Принимает параметр в формате "A,B,C" где A,B,C буквы дисков.
-rem Выполняет последовательный перебор до первой свободной.
-rem В случае занятости всех возвращает пустую строку "".
+rem GetFreeDrive С„СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° СЃРІРѕР±РѕРґРЅРѕР№ Р±СѓРєРІС‹ РґРёСЃРєР° РїРѕ СЃРїРёСЃРєСѓ.
+rem РџСЂРёРЅРёРјР°РµС‚ РїР°СЂР°РјРµС‚СЂ РІ С„РѕСЂРјР°С‚Рµ "A,B,C" РіРґРµ A,B,C Р±СѓРєРІС‹ РґРёСЃРєРѕРІ.
+rem Р’С‹РїРѕР»РЅСЏРµС‚ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹Р№ РїРµСЂРµР±РѕСЂ РґРѕ РїРµСЂРІРѕР№ СЃРІРѕР±РѕРґРЅРѕР№.
+rem Р’ СЃР»СѓС‡Р°Рµ Р·Р°РЅСЏС‚РѕСЃС‚Рё РІСЃРµС… РІРѕР·РІСЂР°С‰Р°РµС‚ РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ "".
 rem ------------------------------------------------------------
 function GetFreeDrive(DriveList)
 Set objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\cimv2")
@@ -528,9 +528,9 @@ rem ------------------------------------------------------------
  
  
 rem ------------------------------------------------------------
-rem GetMountArray Создает массив соответствий диск-путь.
-rem Принимает параметром пользовательский DistinguishedName.
-rem Возвращает двумерный массив ("Буква диска", "путь").
+rem GetMountArray РЎРѕР·РґР°РµС‚ РјР°СЃСЃРёРІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёР№ РґРёСЃРє-РїСѓС‚СЊ.
+rem РџСЂРёРЅРёРјР°РµС‚ РїР°СЂР°РјРµС‚СЂРѕРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ DistinguishedName.
+rem Р’РѕР·РІСЂР°С‰Р°РµС‚ РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ ("Р‘СѓРєРІР° РґРёСЃРєР°", "РїСѓС‚СЊ").
 rem ------------------------------------------------------------
 function GetMountArray(strUserDN)
 Set objUser=GetObject("LDAP://"&strUserDN)
@@ -570,8 +570,8 @@ end function
 rem ------------------------------------------------------------
  
 rem ------------------------------------------------------------
-rem ParseVariables функция поиска переменных в строке и подстановки значений.
-rem возвращает обработанную строку
+rem ParseVariables С„СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° РїРµСЂРµРјРµРЅРЅС‹С… РІ СЃС‚СЂРѕРєРµ Рё РїРѕРґСЃС‚Р°РЅРѕРІРєРё Р·РЅР°С‡РµРЅРёР№.
+rem РІРѕР·РІСЂР°С‰Р°РµС‚ РѕР±СЂР°Р±РѕС‚Р°РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ
 rem ------------------------------------------------------------
 function ParseVariables(strLine)
 set objNet=CreateObject("wscript.network")
@@ -580,7 +580,7 @@ str=replace(str,"%computername%",objNet.ComputerName)
 ParseVariables=str
 end function
 
-' добавляет сетевой диск на основание заметки у групп...
+' РґРѕР±Р°РІР»СЏРµС‚ СЃРµС‚РµРІРѕР№ РґРёСЃРє РЅР° РѕСЃРЅРѕРІР°РЅРёРµ Р·Р°РјРµС‚РєРё Сѓ РіСЂСѓРїРї...
 function SetDisk()
   on error resume next
   set objNet=CreateObject("wscript.network")
@@ -597,7 +597,7 @@ function SetDisk()
   next
 end function
 
-'  изменение ip адреса сетевого адаптера через wmi
+'  РёР·РјРµРЅРµРЅРёРµ ip Р°РґСЂРµСЃР° СЃРµС‚РµРІРѕРіРѕ Р°РґР°РїС‚РµСЂР° С‡РµСЂРµР· wmi
 function ChangeIP()
   strComputer = "."
   Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
@@ -645,14 +645,14 @@ Function getip()
 end function
 
 
-' выводит свободное дисковое пространтсво)
+' РІС‹РІРѕРґРёС‚ СЃРІРѕР±РѕРґРЅРѕРµ РґРёСЃРєРѕРІРѕРµ РїСЂРѕСЃС‚СЂР°РЅС‚СЃРІРѕ)
 
 Function getFreeSpace()
   on Error resume Next
-  stringx = "Локальные диски" & vbNewLine  & vbNewLine
+  stringx = "Р›РѕРєР°Р»СЊРЅС‹Рµ РґРёСЃРєРё" & vbNewLine  & vbNewLine
   Set fso = WScript.CreateObject("Scripting.FileSystemObject")
   Set WSHShell = WScript.CreateObject("WScript.Shell")
-  'Проверяем все драйвы (HDD, FDD, CDD) в системе    
+  'РџСЂРѕРІРµСЂСЏРµРј РІСЃРµ РґСЂР°Р№РІС‹ (HDD, FDD, CDD) РІ СЃРёСЃС‚РµРјРµ    
   For each i In fso.Drives
     If i.DriveType=1 Then
       If i<>"A:" Then
@@ -661,7 +661,7 @@ Function getFreeSpace()
     End If
     If i.DriveType=2 Then
       free=frit(i)
-      stringx= stringx & " На диске " & i & " свободно " & free & " Мб " & vbNewLine
+      stringx= stringx & " РќР° РґРёСЃРєРµ " & i & " СЃРІРѕР±РѕРґРЅРѕ " & free & " РњР± " & vbNewLine
     End If
   Next
   stringx = stringx
@@ -674,10 +674,10 @@ function frit(gg)
 End function
 
 
-' Выводит данные в процентах. 
-' При превышении определенного порога % свободного пространства скрипт отсылает предупреждающее 
-' (о том что на системном диске 0% свободно) сообщение на почту. 
-' Задействовать SimpleMAPI. См. "Microsoft Collaboration Data Objects Programmer's Reference" в MSDN. 
+' Р’С‹РІРѕРґРёС‚ РґР°РЅРЅС‹Рµ РІ РїСЂРѕС†РµРЅС‚Р°С…. 
+' РџСЂРё РїСЂРµРІС‹С€РµРЅРёРё РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ РїРѕСЂРѕРіР° % СЃРІРѕР±РѕРґРЅРѕРіРѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° СЃРєСЂРёРїС‚ РѕС‚СЃС‹Р»Р°РµС‚ РїСЂРµРґСѓРїСЂРµР¶РґР°СЋС‰РµРµ 
+' (Рѕ С‚РѕРј С‡С‚Рѕ РЅР° СЃРёСЃС‚РµРјРЅРѕРј РґРёСЃРєРµ 0% СЃРІРѕР±РѕРґРЅРѕ) СЃРѕРѕР±С‰РµРЅРёРµ РЅР° РїРѕС‡С‚Сѓ. 
+' Р—Р°РґРµР№СЃС‚РІРѕРІР°С‚СЊ SimpleMAPI. РЎРј. "Microsoft Collaboration Data Objects Programmer's Reference" РІ MSDN. 
 function getFreeSpace2()
   Const AlertHigh = .9                    
   Const emailFrom = "xx@xxx.ru"        

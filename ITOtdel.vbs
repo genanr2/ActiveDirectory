@@ -1,13 +1,13 @@
-Option Explicit  
+п»їOption Explicit  
 On Error Resume Next  
 Dim WshShell
 dim DesktopPath 
 dim WorkingPath
 dim oShortCut
 
-' Замена пароля Администратора на всех компьютерах 
+' Р—Р°РјРµРЅР° РїР°СЂРѕР»СЏ РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° РЅР° РІСЃРµС… РєРѕРјРїСЊСЋС‚РµСЂР°С… 
 'strComputer = "."
-'Set objUser = GetObject("WinNT://" & strComputer & "/Администратор,user")
+'Set objUser = GetObject("WinNT://" & strComputer & "/РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ,user")
 'objUser.SetPassword "gztECPh8"
 'objUser.SetInfo
 
@@ -15,13 +15,13 @@ Dim oShell' as WshShell
 Set oShell = WScript.CreateObject("WScript.Shell")
 DesktopPath = oShell.SpecialFolders("Desktop")
 'WorkingPath = oShell.SpecialFolders("\\192.168.1.209\Garant\Garant-FS")
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 1"
-Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Гарант Платформа F1 Эксперт.lnk")
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 1"
+Set oShortCut = oShell.CreateShortcut(DesktopPath & "\Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚.lnk")
 oShortCut.TargetPath = "\\192.168.1.224\Garant\Garant-FS\garant.exe"
 oShortCut.WorkingDirectory = "\\192.168.1.224\Garant\Garant-FS"
-oShortCut.Description = "Гарант Платформа F1 Эксперт"
+oShortCut.Description = "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚"
 oShortCut.Save
-oShell.LogEvent 1, "Гарант Платформа F1 Эксперт 2"
+oShell.LogEvent 1, "Р“Р°СЂР°РЅС‚ РџР»Р°С‚С„РѕСЂРјР° F1 Р­РєСЃРїРµСЂС‚ 2"
 
 
 rem net use x: \\192.168.1.224\1Cdata Buh2010 /user:BuhOff
@@ -33,9 +33,9 @@ Dim WshNetwork
 'Set WshShell = WScript.CreateObject("WScript.Shell")  
 Set WshNetwork = WScript.CreateObject("WScript.Network")  
 'WshNetwork.RemoveNetworkDrive "y:"
-'MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", "Администратор", "Ghj100rdf"
-'oShell.LogEvent 1, "Кружка."
-'oShell.LogEvent 1, "Кружка."
+'MapNetworkDrive "y:", "\\192.168.1.226\sbisNET", "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ", "Ghj100rdf"
+'oShell.LogEvent 1, "РљСЂСѓР¶РєР°."
+'oShell.LogEvent 1, "РљСЂСѓР¶РєР°."
 'WshNetwork.RemoveNetworkDrive "x"
 'WshNetwork.RemoveNetworkDrive "y"
 'WshNetwork.RemoveNetworkDrive "z"
@@ -44,13 +44,13 @@ Set WshNetwork = WScript.CreateObject("WScript.Network")
 ' On Error Resume Next  
 ' WshNetwork.RemoveNetworkDrive DrvLet  
 
-oShell.LogEvent 2, "ИТ отдел."
-oShell.LogEvent 2, "ИТ отдел."
+oShell.LogEvent 2, "РРў РѕС‚РґРµР»."
+oShell.LogEvent 2, "РРў РѕС‚РґРµР»."
 oShell.LogEvent 2, CStr(Err.Number)
 oShell.LogEvent 2, Err.Description
 
 
-'под каким именем на любом компьютере в локальной сети вошли
+'РїРѕРґ РєР°РєРёРј РёРјРµРЅРµРј РЅР° Р»СЋР±РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ РІ Р»РѕРєР°Р»СЊРЅРѕР№ СЃРµС‚Рё РІРѕС€Р»Рё
 Dim objAD, objUserName, objComputerName
 Dim objFS, objFile
 Dim objWMI
@@ -64,7 +64,7 @@ dim objWMIService
 dim colNetAdapters
 dim strAddress
 
-Const strPath = "\\192.168.1.230\пользователидомена\Log.txt" 'Здесь надо задать UNC-путь к доступному для всех пользователей на запись сетевому ресурсу
+Const strPath = "\\192.168.1.230\РїРѕР»СЊР·РѕРІР°С‚РµР»РёРґРѕРјРµРЅР°\Log.txt" 'Р—РґРµСЃСЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ UNC-РїСѓС‚СЊ Рє РґРѕСЃС‚СѓРїРЅРѕРјСѓ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РЅР° Р·Р°РїРёСЃСЊ СЃРµС‚РµРІРѕРјСѓ СЂРµСЃСѓСЂСЃСѓ
 Const ForAppending = 8
 Set objAD = CreateObject("ADSystemInfo")
 Set objUserName = GetObject("LDAP://" & objAD.UserName)
@@ -100,7 +100,7 @@ set objRet = objSvc.InstancesOf("win32_LogicalDisk")
 for each item in objRet
   if item.DriveType = 7 then
   else
-    strMessage = strMessage & "Свободно на '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " Мб из " & FormatNumber((item.size/1024000),0) & " Мб"
+    strMessage = strMessage & "РЎРІРѕР±РѕРґРЅРѕ РЅР° '" & item.caption & "' = " & FormatNumber((item.FreeSpace/1024000),0) & " РњР± РёР· " & FormatNumber((item.size/1024000),0) & " РњР±"
     objFile.WriteLine(strMessage)
     strMessage=""
   end if
@@ -109,14 +109,14 @@ set objSvc = Nothing
 set objRet = Nothing
 Set objCollection = objWMIService.ExecQuery("SELECT * FROM Win32_OperatingSystem")
 For Each objItem In objCollection
-  objFile.WriteLine("Версия ОС: " & objItem.Version & " Пакет обновления: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
+  objFile.WriteLine("Р’РµСЂСЃРёСЏ РћРЎ: " & objItem.Version & " РџР°РєРµС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ: " & objItem.ServicePackMajorVersion & "." & objItem.ServicePackMinorVersion & vbNewLine)
 Next
 'BIOS=
 'CPU_Freq_in_MHz=
 'CPU=
 'Memory_in_Mb=
 'RetCode = WshShell.Run("d:\psexec.exe \\comp1 -s \\server\enu\windowsXP-KB957097-x86.exe /quiet /norestart", 1, True)
-'MsgBox "Обновление завершено! Код возврата - " & RetCode
+'MsgBox "РћР±РЅРѕРІР»РµРЅРёРµ Р·Р°РІРµСЂС€РµРЅРѕ! РљРѕРґ РІРѕР·РІСЂР°С‚Р° - " & RetCode
 
 'Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\CIMV2") 
 dim strTextBody
@@ -124,7 +124,7 @@ Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfig
 For Each objItem in colItems 
     If isNull(objItem.IPAddress) Then
     Else
-      strTextBody = strTextBody + vbCrLf + "Сетевая карта: " & objItem.Caption & ", IP адрес: " & Join(objItem.IPAddress, ",")
+      strTextBody = strTextBody + vbCrLf + "РЎРµС‚РµРІР°СЏ РєР°СЂС‚Р°: " & objItem.Caption & ", IP Р°РґСЂРµСЃ: " & Join(objItem.IPAddress, ",")
     End If
 Next
 objFile.WriteLine(strTextBody)
@@ -135,19 +135,19 @@ dim compname, temp, compad
 constmb=1048576 
 Set colItems = objWMIService.InstancesOf("win32_ComputerSystem")
 for each objItem in colItems 
-  objFile.WriteLine("Оперативная память " & cstr(round(objItem.totalphysicalmemory/constmb)))
-  objFile.WriteLine("Модель компьютера " & objitem.model & vbCrLf)
+  objFile.WriteLine("РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ " & cstr(round(objItem.totalphysicalmemory/constmb)))
+  objFile.WriteLine("РњРѕРґРµР»СЊ РєРѕРјРїСЊСЋС‚РµСЂР° " & objitem.model & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_bios")
 for each objItem in colItems 
-  objFile.WriteLine("Материнская плата " & objitem.SMBIOSBIOSVersion)
+  objFile.WriteLine("РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р° " & objitem.SMBIOSBIOSVersion)
   objFile.WriteLine("BIOS " & objitem.caption & vbCrLf)
 next
 Set colItems = objWMIService.InstancesOf("win32_processor")
 for each objItem in colItems 
   s=s+1 
-  objFile.WriteLine("Процессор " & cstr(s) & " " & objitem.name)
-  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Частота "+cstr(objitem.CurrentClockSpeed))
+  objFile.WriteLine("РџСЂРѕС†РµСЃСЃРѕСЂ " & cstr(s) & " " & objitem.name)
+  objFile.WriteLine("BIOS " & objitem.caption & vbCrLf & " Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed))
 next
 
 objFile.WriteLine("**************************************************************")
@@ -164,12 +164,12 @@ Set objWMI = Nothing
 WScript.Quit()
 
 'Msg = "Mapping network drive: " & CStr(Err.Number) & " 0x" & Hex(Err.Number) & vbCrLf & _  
-'  "Описание: " & Err.Description & vbCrLf  
+'  "РћРїРёСЃР°РЅРёРµ: " & Err.Description & vbCrLf  
 '  Msg = Msg & "Domain: " & WshNetwork.UserDomain & vbCrLf  
 '  Msg = Msg & "Computer Name: " & WshNetwork.ComputerName & vbCrLf  
-'  Msg = Msg & "Пользователь: " & WshNetwork.UserName & vbCrLf & vbCrLf  
-'  Msg = Msg & "Диск: " & "y:" & vbCrLf  
-'  Msg = Msg & "Маршрут: " & "\\192.168.1.226\sbisNET"
+'  Msg = Msg & "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: " & WshNetwork.UserName & vbCrLf & vbCrLf  
+'  Msg = Msg & "Р”РёСЃРє: " & "y:" & vbCrLf  
+'  Msg = Msg & "РњР°СЂС€СЂСѓС‚: " & "\\192.168.1.226\sbisNET"
 'oShell.LogEvent 1, Msg
 'Set objSysInfo = CreateObject("ADSystemInfo")   
 'strUserDN = objSysInfo.userName   
@@ -187,9 +187,9 @@ WScript.Quit()
 'MapDrv "L:", "\\SRV\Users\" & WshShell.ExpandEnvironmentStrings("%USERNAME%")  
 '==========================================================================  
 ' Function MapDrv(DrvLet, UNCPath)  
-' DrvLet -  Буква устройства  
-' UNCPath - Сетевой путь  
-' COMMENT: Подключение сетевых дисков с записью ошибок в EventLog  
+' DrvLet -  Р‘СѓРєРІР° СѓСЃС‚СЂРѕР№СЃС‚РІР°  
+' UNCPath - РЎРµС‚РµРІРѕР№ РїСѓС‚СЊ  
+' COMMENT: РџРѕРґРєР»СЋС‡РµРЅРёРµ СЃРµС‚РµРІС‹С… РґРёСЃРєРѕРІ СЃ Р·Р°РїРёСЃСЊСЋ РѕС€РёР±РѕРє РІ EventLog  
 '==========================================================================  
 Function MapDrv(DrvLet, UNCPath, sUsername, sPassword)  
     Dim WshNetwork         ' Object variable  
@@ -207,10 +207,10 @@ Function MapDrv(DrvLet, UNCPath, sUsername, sPassword)
       Msg = Msg & "Device name: " & DrvLet & vbCrLf  
       Msg = Msg & "Map path: " & UNCPath   
     WshShell.LogEvent 1, Msg, "\\SRV"  
-    WshShell.LogEvent 4, "Кружка."
-'    WshShell.LogEvent 2, "Кружка."
-'    WshShell.LogEvent 0, "Кружка."
-'    WshShell.LogEvent 1, "Кружка."
+    WshShell.LogEvent 4, "РљСЂСѓР¶РєР°."
+'    WshShell.LogEvent 2, "РљСЂСѓР¶РєР°."
+'    WshShell.LogEvent 0, "РљСЂСѓР¶РєР°."
+'    WshShell.LogEvent 1, "РљСЂСѓР¶РєР°."
 
 '  0  SUCCESS
 '  1  ERROR
@@ -228,21 +228,21 @@ Function MapDrv(DrvLet, UNCPath, sUsername, sPassword)
             WshNetwork.RemoveNetworkDrive DrvLet  
             WshNetwork.MapNetworkDrive DrvLet, UNCPath  
         Case Else  
-            Msg = "Ошибка отображения сетевого диска: " & _   
+            Msg = "РћС€РёР±РєР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРµС‚РµРІРѕРіРѕ РґРёСЃРєР°: " & _   
                    CStr(Err.Number) & " 0x" & Hex(Err.Number) & vbCrLf & _  
-                  "Описание ошибки: " & Err.Description & vbCrLf  
-            Msg = Msg & "Домен: " & WshNetwork.UserDomain & vbCrLf  
-            Msg = Msg & "Имя машины: " & WshNetwork.ComputerName & vbCrLf  
-            Msg = Msg & "Пользователь: " & WshNetwork.UserName & vbCrLf & vbCrLf  
-            Msg = Msg & "Устройство: " & DrvLet & vbCrLf  
-            Msg = Msg & "Путь отображения: " & UNCPath   
+                  "РћРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё: " & Err.Description & vbCrLf  
+            Msg = Msg & "Р”РѕРјРµРЅ: " & WshNetwork.UserDomain & vbCrLf  
+            Msg = Msg & "РРјСЏ РјР°С€РёРЅС‹: " & WshNetwork.ComputerName & vbCrLf  
+            Msg = Msg & "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: " & WshNetwork.UserName & vbCrLf & vbCrLf  
+            Msg = Msg & "РЈСЃС‚СЂРѕР№СЃС‚РІРѕ: " & DrvLet & vbCrLf  
+            Msg = Msg & "РџСѓС‚СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ: " & UNCPath   
             WshShell.LogEvent 1, Msg, "\\SRV"  
     End Select  
 End Function 
 '==========================================================================  
 ' Function InGroup(strGroup) 
-' strGroup - группа, принадлежность к которой проверяем 
-' COMMENT: проверка принадлежности пользователя к группе 
+' strGroup - РіСЂСѓРїРїР°, РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ Рє РєРѕС‚РѕСЂРѕР№ РїСЂРѕРІРµСЂСЏРµРј 
+' COMMENT: РїСЂРѕРІРµСЂРєР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рє РіСЂСѓРїРїРµ 
 '==========================================================================  
 Function InGroup(strGroup)    
   InGroup=False    
@@ -304,7 +304,7 @@ Function Shell1()
   for each obj in objAD 
     CompAD=right(obj.name, len(obj.name)-3) 
     invdate = date 
-    temp="<html>"+chr(10)+"Дата сбора: " & invdate & "<table>"+chr(10) 
+    temp="<html>"+chr(10)+"Р”Р°С‚Р° СЃР±РѕСЂР°: " & invdate & "<table>"+chr(10) 
     compname="" 
     ' on error resume next 
     set objWMIService = GetObject("winmgmts://"&CompAD&"/root\cimv2") 
@@ -319,18 +319,18 @@ Function Shell1()
         select case a 
           case 0 
             temp=temp+"<tr><td>" 
-            temp=temp+"Имя компьютера"+"</td><td>"+objitem.name+ "</td>" + chr(10) 
+            temp=temp+"РРјСЏ РєРѕРјРїСЊСЋС‚РµСЂР°"+"</td><td>"+objitem.name+ "</td>" + chr(10) 
             temp=temp+"</tr>"+chr(10) 
             temp=temp+"<tr><td>" 
-            temp=temp+"Оперативная память"+"</td><td>"+cstr(round(objitem.totalphysicalmemory/constmb))+ " MB</td>" + chr(10) 
+            temp=temp+"РћРїРµСЂР°С‚РёРІРЅР°СЏ РїР°РјСЏС‚СЊ"+"</td><td>"+cstr(round(objitem.totalphysicalmemory/constmb))+ " MB</td>" + chr(10) 
             temp=temp+"</tr>"+chr(10) 
             temp=temp+"<tr><td>" 
-            temp=temp+"Модель компьютера"+"</td><td>"+objitem.model+ "</td>" + chr(10) 
+            temp=temp+"РњРѕРґРµР»СЊ РєРѕРјРїСЊСЋС‚РµСЂР°"+"</td><td>"+objitem.model+ "</td>" + chr(10) 
             temp=temp+"</tr>"+chr(10) 
             compname=objitem.name 
           case 1 
             temp=temp+"<tr><td>" 
-            temp=temp+"Материнская плата"+"</td><td>"+objitem.SMBIOSBIOSVersion+"</td>"+chr(10) 
+            temp=temp+"РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°"+"</td><td>"+objitem.SMBIOSBIOSVersion+"</td>"+chr(10) 
             temp=temp+"</tr>"+chr(10) 
             temp=temp+"<tr><td>" 
             temp=temp+"BIOS"+"</td><td>" + objitem.caption+"</td>"+chr(10)+"<td>"+chr(10)+"</td>" 
@@ -338,7 +338,7 @@ Function Shell1()
           case 2 
             s=s+1 
             temp=temp+"<tr>"+chr(10)+"<td>" 
-            temp=temp+"Процессор"+cstr(s)+"</td>"+chr(10)+"<td>"+objitem.name+" Частота "+cstr(objitem.CurrentClockSpeed)+chr(10)+"</td>" 
+            temp=temp+"РџСЂРѕС†РµСЃСЃРѕСЂ"+cstr(s)+"</td>"+chr(10)+"<td>"+objitem.name+" Р§Р°СЃС‚РѕС‚Р° "+cstr(objitem.CurrentClockSpeed)+chr(10)+"</td>" 
             temp=temp+"</tr>"+chr(10) 
           case 3 
             i=i+1 
@@ -348,38 +348,38 @@ Function Shell1()
             else 
               sizegb=cstr(0) 
             end if 
-            temp=temp+"Жесткий диск "+cstr(i)+"</td>"+chr(10)+"<td>"+objitem.model + " " + sizegb + " GB</td>" + chr(10) 
+            temp=temp+"Р–РµСЃС‚РєРёР№ РґРёСЃРє "+cstr(i)+"</td>"+chr(10)+"<td>"+objitem.model + " " + sizegb + " GB</td>" + chr(10) 
             temp=temp+"</tr>"+chr(10) 
           case 4 
             temp=temp+"<tr>"+chr(10)+"<td>" 
-            temp=temp+"Видеоконтролер"+"</td>"+chr(10)+"<td>"+objitem.caption+chr(10)+"</td>" 
+            temp=temp+"Р’РёРґРµРѕРєРѕРЅС‚СЂРѕР»РµСЂ"+"</td>"+chr(10)+"<td>"+objitem.caption+chr(10)+"</td>" 
             temp=temp+"</tr>"+chr(10) 
           case 5 
             if objitem.adaptertypeid=0 and objitem.netconnectionstatus=2 then 
               temp=temp+"<tr>"+chr(10)+"<td>" 
-              temp=temp+"Сетевой адаптер"+"</td>"+chr(10) 
+              temp=temp+"РЎРµС‚РµРІРѕР№ Р°РґР°РїС‚РµСЂ"+"</td>"+chr(10) 
               temp=temp+"<td>"+objitem.name+chr(10)+"</td>" 
               temp=temp+"</tr>"+chr(10) 
              end if 
           case 6 
             temp=temp+"<tr>"+chr(10)+"<td>" 
-            temp=temp+"Звуковая карта"+"</td>"+chr(10) 
+            temp=temp+"Р—РІСѓРєРѕРІР°СЏ РєР°СЂС‚Р°"+"</td>"+chr(10) 
             temp=temp+"<td>"+objitem.caption+chr(10)+"</td></tr>"+chr(10) 
           case 7 
             temp=temp+"<tr>"+chr(10)+"<td>" 
-            temp=temp+"SCSI Адаптер"+"</td>"+chr(10) 
+            temp=temp+"SCSI РђРґР°РїС‚РµСЂ"+"</td>"+chr(10) 
             temp=temp+"<td>"+objitem.manufacturer+" "+objitem.caption+chr(10)+"</td></tr>"+chr(10) 
           case 8 
             d=d+1 
             temp=temp+"<tr>"+chr(10)+"<td>" 
-            temp=temp+"Принтер "+cstr(d)+"</td>"+chr(10)+"<td>"+objitem.name+chr(10)+"</td>" 
+            temp=temp+"РџСЂРёРЅС‚РµСЂ "+cstr(d)+"</td>"+chr(10)+"<td>"+objitem.name+chr(10)+"</td>" 
             temp=temp+"</tr>"+chr(10) 
         end select 
       next 
     next 
-    'Заключительная часть 
+    'Р—Р°РєР»СЋС‡РёС‚РµР»СЊРЅР°СЏ С‡Р°СЃС‚СЊ 
     temp=temp+"</table></html>" 
-    'Запись файла 
+    'Р—Р°РїРёСЃСЊ С„Р°Р№Р»Р° 
     Dim fso, tf 
     Set fso = CreateObject("Scripting.FileSystemObject") 
     Set tf = fso.CreateTextFile(""&compname&".htm", True) 
